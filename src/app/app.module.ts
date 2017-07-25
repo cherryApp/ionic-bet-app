@@ -13,6 +13,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HttpModule } from '@angular/http';
 import { TranslateService } from '../services/translate.service';
+import { TranslatePipe } from '../pipes/translate/translate';
+import { ClubService } from '../services/club.service';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,8 @@ import { TranslateService } from '../services/translate.service';
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    TranslatePipe
   ],
   imports: [
     BrowserModule,
@@ -39,6 +42,7 @@ import { TranslateService } from '../services/translate.service';
     StatusBar,
     SplashScreen,
     TranslateService,
+    ClubService,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

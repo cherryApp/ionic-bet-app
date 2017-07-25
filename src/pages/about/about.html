@@ -1,11 +1,15 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      About
-    </ion-title>
-  </ion-navbar>
+    <ion-navbar>
+        <ion-title>
+            {{ "BETTING" | translate }}
+        </ion-title>
+    </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-
+    <ion-list>
+        <button ion-item *ngFor="let club of clubs">
+            {{ club.name }}
+        </button>
+    </ion-list>
 </ion-content>
