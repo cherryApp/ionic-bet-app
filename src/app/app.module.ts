@@ -15,6 +15,7 @@ import { HttpModule } from '@angular/http';
 import { TranslateService } from '../services/translate.service';
 import { TranslatePipe } from '../pipes/translate/translate';
 import { ClubService } from '../services/club.service';
+import { MatchService } from '../services/match.service';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { ClubService } from '../services/club.service';
     SplashScreen,
     TranslateService,
     ClubService,
+    MatchService,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

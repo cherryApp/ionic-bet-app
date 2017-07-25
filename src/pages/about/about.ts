@@ -1,6 +1,7 @@
 import { Component, Output } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { ClubService } from '../../services/club.service';
+import { MatchService } from '../../services/match.service';
 
 @Component({
   selector: 'page-about',
@@ -8,13 +9,13 @@ import { ClubService } from '../../services/club.service';
 })
 export class AboutPage {
 
-  @Output() clubs: Array<object> = [];
+  @Output() rounds: Array<object> = [];
 
-  constructor(public navCtrl: NavController, private clubService: ClubService) {
-    this.clubService.getAll()
-      .then( clubs => {
-        console.log(clubs);
-        this.clubs = clubs as Array<object>;
+  constructor(public navCtrl: NavController, private mService: MatchService) {
+    this.mService.getAll()
+      .then( rounds => {
+        console.log(rounds);
+        this.rounds = rounds;
       });
   }
 

@@ -8,8 +8,8 @@
 
 <ion-content padding>
     <ion-list>
-        <button ion-item *ngFor="let club of clubs">
-            {{ club.name }}
+        <button ion-item *ngFor="let round of rounds">
+            {{ round.name }} | {{ round.matches[0].date }}
         </button>
     </ion-list>
 </ion-content>
