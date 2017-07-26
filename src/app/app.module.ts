@@ -10,6 +10,7 @@ import { TabsPage } from '../pages/tabs/tabs';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { IonicStorageModule } from '@ionic/storage';
 
 import { HttpModule } from '@angular/http';
 import { TranslateService } from '../services/translate.service';
@@ -18,6 +19,7 @@ import { ClubService } from '../services/club.service';
 import { MatchService } from '../services/match.service';
 import { BetModalComponent } from '../components/bet-modal/bet-modal';
 import { BetModalFormComponent } from '../components/bet-modal-form/bet-modal-form';
+import { StorageService } from '../services/storage.service';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,8 @@ import { BetModalFormComponent } from '../components/bet-modal-form/bet-modal-fo
   imports: [
     BrowserModule,
     HttpModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    IonicStorageModule.forRoot()
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -51,6 +54,7 @@ import { BetModalFormComponent } from '../components/bet-modal-form/bet-modal-fo
     TranslateService,
     ClubService,
     MatchService,
+    StorageService,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

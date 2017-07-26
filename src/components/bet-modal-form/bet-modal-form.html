@@ -17,18 +17,23 @@
         <ion-item>
             <ion-label>{{ "WINNER_TEAM" | translate }}</ion-label>
             <ion-select [(ngModel)]="winner" interface="action-sheet">
-                <ion-option value="team1">Manchester City</ion-option>
-                <ion-option value="team2">Manchester</ion-option>
+                <ion-option [value]="match.team1.code">
+                  {{ match.team1.name }}
+                </ion-option>
+                <ion-option [value]="match.team2.code">
+                  {{ match.team2.name }}
+                </ion-option>
             </ion-select>
         </ion-item>
         <ion-item>
             <ion-label>{{ "AMOUNT" | translate }}</ion-label>
-            <ion-input type="number"></ion-input>
+            <ion-input [(ngModel)]="amount" type="number"></ion-input>
         </ion-item>
     </ion-list>
 
     <div padding>
-        <button ion-button color="primary" block>
+        <button ion-button color="primary" block
+          (click)="saveBetting()">
       {{ "SEND_BETTING" | translate }}
     </button>
     </div>
