@@ -16,6 +16,8 @@ import { TranslateService } from '../services/translate.service';
 import { TranslatePipe } from '../pipes/translate/translate';
 import { ClubService } from '../services/club.service';
 import { MatchService } from '../services/match.service';
+import { BetModalComponent } from '../components/bet-modal/bet-modal';
+import { BetModalFormComponent } from '../components/bet-modal-form/bet-modal-form';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { MatchService } from '../services/match.service';
     ContactPage,
     HomePage,
     TabsPage,
-    TranslatePipe
+    TranslatePipe,
+    BetModalComponent,
+    BetModalFormComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +41,9 @@ import { MatchService } from '../services/match.service';
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    BetModalComponent,
+    BetModalFormComponent
   ],
   providers: [
     StatusBar,

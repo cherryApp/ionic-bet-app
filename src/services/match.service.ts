@@ -11,7 +11,7 @@ export class MatchService {
 
   }
 
-  getAll(): Promise<object[]> {
+  getAll(): Promise<any> {
     return new Promise( (resolve, reject) => {
       if (this.items.length > 0) {
         return resolve(this.items);

@@ -8,7 +8,8 @@
 
 <ion-content padding>
     <ion-list>
-        <button ion-item *ngFor="let round of rounds">
+        <button ion-item *ngFor="let round of rounds"
+          (click)="matchDaySelected(round)">
             {{ round.name }} | {{ round.matches[0].date }}
         </button>
     </ion-list>
