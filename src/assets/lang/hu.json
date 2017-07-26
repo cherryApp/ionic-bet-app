@@ -4,5 +4,9 @@
   "HISTORY": "Előzmények",
   "HOME_PAGE_TITLE": "Fogadj a legjobbra",
   "HOME_PAGE_LEAD": "Az alkalmazásban fogadhatsz a futball eredményekre.Navigálj a fogadás oldalra!",
-  "MATCHES": "Meccsek"
+  "MATCHES": "Meccsek",
+  "NEW_BETTING": "Fogadás",
+  "WINNER_TEAM": "Esélyes",
+  "AMOUNT" : "Összeg",
+  "SEND_BETTING": "Tét beküldése"
 }

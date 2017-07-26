@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output } from '@angular/core';
 import { ModalController, NavParams, ViewController } from "ionic-angular";
 
 /**
@@ -15,6 +15,8 @@ export class BetModalFormComponent {
 
   matchesDate: string;
   match: any = {};
+
+  @Output() winner = {};
 
   constructor(public params: NavParams, public viewCtrl: ViewController,
               public modalController: ModalController) {
