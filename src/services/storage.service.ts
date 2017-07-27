@@ -4,7 +4,7 @@ import { Storage } from '@ionic/storage';
 
 @Injectable()
 export class StorageService {
-  constructor(private storage: Storage) {}
+  constructor(public storage: Storage) {}
 
   setValue(key, value): Promise<any> {
     return this.storage.set(key, value);

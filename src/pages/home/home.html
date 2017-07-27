@@ -1,12 +1,25 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>{{ "HOME" | translate }}</ion-title>
-  </ion-navbar>
+    <ion-navbar>
+        <ion-title>{{ "HOME" | translate }}</ion-title>
+    </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <h2>{{ "HOME_PAGE_TITLE" | translate }}!</h2>
-  <p>
-    {{ "HOME_PAGE_LEAD" | translate }}
-  </p>
+    <h2>{{ "HOME_PAGE_TITLE" | translate }}!</h2>
+    <p>
+        {{ "HOME_PAGE_LEAD" | translate }}
+    </p>
+    <hr>
+    <ion-item>
+        <ion-label>{{ "AMOUNT" | translate }}</ion-label>
+        <ion-input [(ngModel)]="amount" type="number"></ion-input>
+    </ion-item>
+    <button class="bottom-elem" ion-button color="primary" block>{{ "UPDATE" | translate }}</button>
+
+    <hr>
+
+    <button class="bottom-elem" ion-button color="danger" block
+      (click)="resetStorage()">
+        {{ "RESET" | translate }}
+    </button>
 </ion-content>

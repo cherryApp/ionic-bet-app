@@ -20,6 +20,7 @@ import { MatchService } from '../services/match.service';
 import { BetModalComponent } from '../components/bet-modal/bet-modal';
 import { BetModalFormComponent } from '../components/bet-modal-form/bet-modal-form';
 import { StorageService } from '../services/storage.service';
+import { AmountService } from '../services/amount.service';
 
 @NgModule({
   declarations: [
@@ -55,6 +56,7 @@ import { StorageService } from '../services/storage.service';
     ClubService,
     MatchService,
     StorageService,
+    AmountService,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

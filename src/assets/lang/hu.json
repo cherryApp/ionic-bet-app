@@ -8,5 +8,7 @@
   "NEW_BETTING": "Fogadás",
   "WINNER_TEAM": "Esélyes",
   "AMOUNT" : "Összeg",
-  "SEND_BETTING": "Tét beküldése"
+  "SEND_BETTING": "Tét beküldése",
+  "RESET": "Visszaállítás",
+  "UPDATE": "Frissítés"
 }

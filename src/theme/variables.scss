@@ -77,3 +77,8 @@ $action-sheet-md-title-font-size: 1.8rem;
 .action-sheet-title {
   background-color: map-get($colors, primary);
 }
+
+.bottom-elem {
+  position: absolute;
+  bottom: 10px;
+}
