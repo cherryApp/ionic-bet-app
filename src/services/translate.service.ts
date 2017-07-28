@@ -5,7 +5,7 @@ import { Http } from '@angular/http';
 export class TranslateService {
   translate: object = {};
   lang: string = "hu";
-  langDir: string = "../assets/lang/";
+  langDir: string = "assets/lang/";
 
   constructor(public http: Http) {
 

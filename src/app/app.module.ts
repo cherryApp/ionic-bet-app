@@ -11,6 +11,7 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { IonicStorageModule } from '@ionic/storage';
+import { Vibration } from '@ionic-native/vibration';
 
 import { HttpModule } from '@angular/http';
 import { TranslateService } from '../services/translate.service';
@@ -21,6 +22,7 @@ import { BetModalComponent } from '../components/bet-modal/bet-modal';
 import { BetModalFormComponent } from '../components/bet-modal-form/bet-modal-form';
 import { StorageService } from '../services/storage.service';
 import { AmountService } from '../services/amount.service';
+import { BetService } from '../services/bet.service';
 
 @NgModule({
   declarations: [
@@ -52,11 +54,13 @@ import { AmountService } from '../services/amount.service';
   providers: [
     StatusBar,
     SplashScreen,
+    Vibration,
     TranslateService,
     ClubService,
     MatchService,
     StorageService,
     AmountService,
+    BetService,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
