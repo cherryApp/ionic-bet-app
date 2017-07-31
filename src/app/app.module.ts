@@ -12,6 +12,8 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { IonicStorageModule } from '@ionic/storage';
 import { Vibration } from '@ionic-native/vibration';
+import { Device } from '@ionic-native/device';
+import { Contacts, Contact, ContactField, ContactName } from '@ionic-native/contacts';
 
 import { HttpModule } from '@angular/http';
 import { TranslateService } from '../services/translate.service';
@@ -55,6 +57,8 @@ import { BetService } from '../services/bet.service';
     StatusBar,
     SplashScreen,
     Vibration,
+    Device,
+    Contacts,
     TranslateService,
     ClubService,
     MatchService,

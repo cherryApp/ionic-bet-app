@@ -22,4 +22,13 @@
       (click)="resetStorage()">
         {{ "RESET" | translate }}
     </button>
+
+    <hr>
+
+    <ion-item>
+      <ion-label>Név</ion-label>
+      <ion-input [(ngModel)]="phrase" type="text"></ion-input>
+    </ion-item>
+    <button ion-button block color="secondary" (click)="startFind()">Keresés</button>
+    <div>{{ debug | json }}</div>
 </ion-content>

@@ -1,7 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, Output } from '@angular/core';
 import { NavController, AlertController } from 'ionic-angular';
 import { StorageService } from '../../services/storage.service';
 import { AmountService } from '../../services/amount.service';
+import { Device } from '@ionic-native/device';
+import { Contacts } from '@ionic-native/contacts';
 
 @Component({
   selector: 'page-home',
@@ -10,10 +12,14 @@ import { AmountService } from '../../services/amount.service';
 export class HomePage {
 
   amount: number = 0;
+  @Output() debug: any = {};
+  @Output() phrase: string = "";
 
   constructor(public navCtrl: NavController, public storage: StorageService,
             public alertCtrl: AlertController,
-            public amountService: AmountService) {
+            public amountService: AmountService,
+            public device: Device,
+            public contacts: Contacts) {
               this.initPage();
   }
 
@@ -21,6 +27,18 @@ export class HomePage {
     this.amountService.amountSubject.subscribe( amount => {
       this.amount = amount;
     });
+
+    // this.debug = this.device.uuid;
+  }
+
+  startFind() {
+    this.contacts.find(["displayName"], {
+      filter: this.phrase,
+      hasPhoneNumber: true
+    })
+      .then( (value) => {
+        this.debug = value.length;
+      });
   }
 
   resetStorage() {
