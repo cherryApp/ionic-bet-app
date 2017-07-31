@@ -29,6 +29,10 @@ export class TranslateService {
     });
   }
 
+  getOne(key): string {
+    return this.translate[key] || "n/a";
+  }
+
   getText(key) {
 
   }

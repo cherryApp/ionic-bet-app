@@ -10,5 +10,8 @@
   "AMOUNT" : "Összeg",
   "SEND_BETTING": "Tét beküldése",
   "RESET": "Visszaállítás",
-  "UPDATE": "Frissítés"
+  "UPDATE": "Frissítés",
+  "UPLOAD": "Feltöltés",
+  "TOP_UP_MESSAGE": "Adja meg a befizetett összeget",
+  "CANCEL": "Mégsem"
 }

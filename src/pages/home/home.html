@@ -14,7 +14,8 @@
         <ion-label>{{ "AMOUNT" | translate }}</ion-label>
         <ion-input [(ngModel)]="amount" type="number"></ion-input>
     </ion-item>
-    <button class="bottom-elem" ion-button color="primary" block>{{ "UPDATE" | translate }}</button>
+    <button class="bottom-elem" ion-button color="primary" block
+      (click)="showAmountPrompt()">{{ "UPDATE" | translate }}</button>
 
     <hr>
 
@@ -25,10 +26,10 @@
 
     <hr>
 
-    <ion-item>
+    <!-- <ion-item>
       <ion-label>Név</ion-label>
       <ion-input [(ngModel)]="phrase" type="text"></ion-input>
     </ion-item>
     <button ion-button block color="secondary" (click)="startFind()">Keresés</button>
-    <div>{{ debug | json }}</div>
+    <div>{{ debug | json }}</div> -->
 </ion-content>
