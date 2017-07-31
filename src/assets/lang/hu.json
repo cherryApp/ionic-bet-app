@@ -13,5 +13,7 @@
   "UPDATE": "Frissítés",
   "UPLOAD": "Feltöltés",
   "TOP_UP_MESSAGE": "Adja meg a befizetett összeget",
-  "CANCEL": "Mégsem"
+  "CANCEL": "Mégsem",
+  "ERROR": "Hiba",
+  "AMOUNT_TOO_LARGE": "Az egyenleg túl alacsony!"
 }

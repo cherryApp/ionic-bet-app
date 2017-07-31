@@ -13,14 +13,16 @@ export class AmountService {
     this.getAmount();
   }
 
+  checkAmount(): number {
+    return this.currentAmount;
+  }
+
   getAmount() {
     this.storageService.getValue("amount")
       .then( amount => {
         if (!amount) {
           amount = 250000;
           this.storageService.setValue("amount", amount);
-          this.currentAmount = amount;
-          return;
         }
 
         this.currentAmount = amount;
